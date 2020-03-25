@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <img height=200 src="SamplePNGImage_500kbmb.png"> 
+        <!--this puts an image with height=200px on the page where src is the source url-->
+        <br>
+        <video height=200 controls loop preload="auto" src="SampleVideo_1280x720_5mb.mp4"> 
+            <!--Without controls, the video will not play
+                when preload is auto, the video will start buffering even before playing
+                when preload is meta, only the thumbnail and the timestamp of the video will be loaded before the vid
+                when preload is none, nothing is loading before playing the vid-->
+        </video>
+        <br>
+        <audio controls src="SampleAudio_0.7mb.mp3"></audio>
+
+    </body>
+</html>
