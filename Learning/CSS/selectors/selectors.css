@@ -1,0 +1,19 @@
+li{
+    font-weight: bold;
+}
+
+ul > li{
+    color: blue;
+}
+
+ol > li{
+    color: red;
+}
+
+ul ul{              /*Here the "ul > ul" combinator will not work as it is not direct child of the parent*/
+    font-style: italic;
+}
+
+ol ~ ul{            /*Here the "ol + ul" combinator will not work as there is some para between its sibling*/
+    background-color: lightslategray;       
+}
