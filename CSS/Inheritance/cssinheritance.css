@@ -1,0 +1,26 @@
+
+/*   PRECEDENCE ORDER:  ID>CLASS>ELEMENT>*    */
+/*   ORDER DECIDES PRECEDENCE IF SAME ID OR CLASS IS USED  */
+* {
+    background-color: lightgray;
+}
+
+.cl1 {
+    background-color: lightcoral;
+}
+
+#id1{
+    background-color: lightgreen;
+}
+
+div{
+    background-color: lightseagreen;
+}
+
+#id1{
+    background-color: lightslategray;
+}
+
+.cl1{
+    background-color: lime;
+}
