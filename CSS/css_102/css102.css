@@ -1,0 +1,17 @@
+.cl1{
+    margin: 20px;  /*margin uses the color of the parent*/
+    padding: 10px; /*padding used the color of itself*/
+    border: solid black 3px;
+}
+
+#div1{
+    background-color: lightgreen;
+}
+
+#div2{
+    background-color: lightsalmon;
+}
+
+#div3{
+    background-color: lightcyan;
+}
