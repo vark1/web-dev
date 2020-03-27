@@ -1,0 +1,8 @@
+ul ul{
+    display: none;      /*Any li inside li gets hidden*/
+}
+
+li:hover > ul{
+    color: red;
+    display: block;
+}

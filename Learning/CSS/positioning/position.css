@@ -1,0 +1,31 @@
+div{
+    background-color: lightcyan;
+    border: 5px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+#div2{
+    position: fixed;
+    top: 100px;
+    left: 70px;
+
+}
+
+#div3{
+    /* position: relative;
+    top: 20px;   */ /*these values dont have any effect in position: static
+    left: 30px;  */ /*Also doing top=10px is same as bottom=-10px */
+    
+    
+    /* position: fixed;  /*Position stays the same even if the page is scrolled and stays relative to the viewport not to the page*/
+    /* bottom: 30px;
+    left: 40px; */
+    
+    /*position: absolute; /*Absolute positions itself according to the nearest parent whose position is fixed*/
+    /*bottom: 30px;
+    left: 40px; */
+    
+    /* position: sticky; */
+
+}

@@ -1,0 +1,11 @@
+#div1{
+    height: 70px;
+    width: 70px;
+    background-color: teal;
+    margin: 150px;
+    /* transform: translate(30px,30px); */
+    /* transform: scale(0.5); */
+    /* transform: skew(60deg,40deg); */
+    /* transform: rotateX(60deg); */
+
+}
