@@ -1,0 +1,39 @@
+div{
+    height: 80px;
+    width: 80px;
+    margin:40px;
+    background-color: purple;
+}
+
+@keyframes slide{
+    from{
+        margin-left: 40px;
+    }
+    to{
+        margin-left: 300px;
+    }
+}
+
+@keyframes superslide{
+    0%{
+        margin-left: 40px;
+    }
+    50%{
+        height: 10px;
+        background-color: sandybrown;
+        margin-left: 150px;
+    }
+    100%{
+        margin-left: 300px;
+        background-color: seagreen;
+    }
+}
+#div1:hover{
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-iteration-count: 10;
+}
+#div3:hover + div{
+    animation-name: superslide;
+    animation-duration: 1s;
+}

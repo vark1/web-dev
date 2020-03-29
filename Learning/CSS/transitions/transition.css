@@ -1,0 +1,26 @@
+div{
+    margin: 100px;
+}
+#div1{
+    background-color: palegreen;
+    height: 80px;
+    width: 80px;
+}
+
+#div2{
+    background-color: orangered;
+    height: 50px;
+    width: 50px;
+}
+
+#div1:hover{
+    background-color: green;
+    height: 40px;
+    transition: background 2s,height 2s;
+}
+
+div:hover + div{
+    margin-left: 200px;
+    border: solid black 200px;
+    transition: margin-left 3s, border 1s;
+}
