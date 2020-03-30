@@ -1,0 +1,29 @@
+#samplediv{
+    height: 300px;
+    width: 300px;
+    background-color: darkslategrey;
+}
+
+@media (max-width: 1500px){
+    #samplediv{
+        background-color: deeppink;
+    }
+}
+
+@media (max-width: 1000px){
+    #samplediv{
+        background-color: darkviolet;
+    }
+}
+
+@media (max-width: 750px){
+    #samplediv{
+        background-color: dodgerblue;
+    }
+}
+
+@media (max-width: 500px){
+    #samplediv{
+        background-color: darkgoldenrod;
+    } 
+}

@@ -1,0 +1,40 @@
+.container{
+    background-color: darkgreen;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row;   default */
+    flex-direction: row;
+    /* flex-wrap: nowrap;     default */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    height: 300px;
+}
+
+body{
+    height: 100px;
+}
+
+.item{
+    background-color: lightgreen;
+    margin: 20px;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    font-size: 30px;
+
+}
+
+#item13{
+    order: 1;
+}
+
+#item12{
+    order: -1; /*Negative items are ordered at the beginning, default order is 0 for every case*/
+    flex-grow: 1;
+}
+
+#item13{
+    flex-grow: 5; /*item13 will grow 5 times more than item12s*/
+}
