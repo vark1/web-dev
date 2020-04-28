@@ -14,4 +14,16 @@ let johngreeter = createGreeter("John Doe");
 let harrygreeter = createGreeter("Harry Potter");
 
 johngreeter();
-harrygreeter();
+harrygreeter();  
+/*we use 'harrygreeter()' and not 'harrygreeter' because we are calling it as a function, 
+by just writing 'harrygreeter' we treat it as an object
+for eg,
+    let a = 10
+    a();
+this will not work
+but,
+    let a = function (){}
+    a();
+this will work
+
+*/
