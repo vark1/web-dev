@@ -1,0 +1,33 @@
+body{
+    background: teal;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    list-style-type: none;
+}
+
+li {
+    display: block;
+    padding: 14px 16px;
+}
+
+ul li:hover{
+    background-color: #111;
+}
+
+.el:hover{
+    color: beige;
+    letter-spacing: 3px;
+    font-size: x-large;
+    transition: color 1s, letter-spacing 1s, font-size 1s;
+}
