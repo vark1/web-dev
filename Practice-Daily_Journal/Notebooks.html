@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <style>
+        body{
+    background: teal;
+}
+
+.navigation_bar{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    list-style-type: none;
+}
+
+li a{
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+ul li:hover{
+    background-color: #111;
+}
+
+li a:hover{
+    color: beige;
+    letter-spacing: 3px;
+    font-size: x-large;
+    transition: color 1s, letter-spacing 1s, font-size 1s;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="navigation_bar">
+            <li class="el"><a href="home.html">Home</a></li>
+            <li class="el"><a href="mynotes.html">My Notes</a></li>
+            <li class="el"><a href="Notebooks.html">Notebooks</a></li>
+            <li class="el"><a href="trash.html">Trash</a></li>
+        </ul>
+        <div></div>
+    </div>
+    <h1>These sticky notes are not actually sticky but their position is </h1>
+</body>
+</html>

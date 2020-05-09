@@ -1,8 +1,8 @@
 body{
-    background: teal;
+    background-color: beige;
 }
 
-ul{
+.navigation_bar{
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -16,18 +16,21 @@ ul{
     list-style-type: none;
 }
 
-li {
+li a{
     display: block;
     padding: 14px 16px;
+    text-decoration: none;
+    color: black;
 }
 
 ul li:hover{
     background-color: #111;
 }
 
-.el:hover{
-    color: beige;
+li a:hover{
+    color: greenyellow;
     letter-spacing: 3px;
     font-size: x-large;
     transition: color 1s, letter-spacing 1s, font-size 1s;
 }
+
