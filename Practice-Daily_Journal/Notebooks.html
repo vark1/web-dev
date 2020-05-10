@@ -6,16 +6,15 @@
     <title>Sticky Notes</title>
     <style>
         body{
-    background: teal;
+    background: beige;
 }
 
-.navigation_bar{
+.navbar{
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    justify-content: space-evenly;
+    float: right;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: bold;
@@ -35,16 +34,16 @@ ul li:hover{
 }
 
 li a:hover{
-    color: beige;
+    color: greenyellow;
     letter-spacing: 3px;
     font-size: x-large;
-    transition: color 1s, letter-spacing 1s, font-size 1s;
+    transition: color 0.5s, letter-spacing 0.5s, font-size 0.5s;
 }
     </style>
 </head>
 <body>
     <div class="container">
-        <ul class="navigation_bar">
+        <ul class="navbar">
             <li class="el"><a href="home.html">Home</a></li>
             <li class="el"><a href="mynotes.html">My Notes</a></li>
             <li class="el"><a href="Notebooks.html">Notebooks</a></li>

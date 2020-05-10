@@ -1,16 +1,41 @@
 body{
-    background-color: beige;
+    background-color: white;
+    margin: 0;
 }
 
-.navigation_bar{
+.container{
+    margin: 0;
+    background-image: url(background_img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+}
+
+.textheading{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    cursor: default;
+}
+
+h1{
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+h2{
+    margin: 5px;
+    color: white;
+}
+
+.navbar{
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    justify-content: space-evenly;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: large;
     list-style-type: none;
@@ -20,17 +45,31 @@ li a{
     display: block;
     padding: 14px 16px;
     text-decoration: none;
-    color: black;
-}
-
-ul li:hover{
-    background-color: #111;
+    color: white;
 }
 
 li a:hover{
-    color: greenyellow;
+    background-color: rgba(220, 220, 220, 0.699);
     letter-spacing: 3px;
-    font-size: x-large;
-    transition: color 1s, letter-spacing 1s, font-size 1s;
+    font-size: large;
+    transition: letter-spacing 0.5s, background-color 1s;
 }
 
+#logo{
+    height: 50px; 
+    margin-left: 20px; 
+    margin-top: 15px;
+    filter: invert(1);
+
+}
+
+#logo:hover{
+    transform: rotate(360deg);
+    height: 70px;
+    transition: transform .8s ease-in-out, height .8s;
+}
+
+#arrow{
+    filter: invert(1);
+    height: 70px;
+}
