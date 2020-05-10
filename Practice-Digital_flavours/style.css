@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar header*/
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 7% 15px 4%;
+}
+
+.navbar li{
+    display: inline-block;
+    border: none;
+    line-height: 200%;
+    transition: all 1ms ease;
+    padding: 0px 20px;
+
+}
+
+.navbar li a{
+    color: black;
+}
+
+.logo{
+    height: 90px;
+    cursor: pointer;
+    margin-right: auto;
+    transition: all 0.1s ease-out;
+}
+
+.logo:hover{
+    height: 100px;
+}
+
+li, a, button{
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar li:hover{
+    border-bottom: 1.5px rgb(0,134,143) solid;    
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,134,143,1);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+}
+
+button:hover{
+    background-color: rgba(0,134,143,0.7);
+}
+
+/*Front heading*/
+
+.frontheadings{
+    font-size: 40px;
+    font-family: "Roboto Mono", sans-serif;
+    text-align: center;
+    background: linear-gradient(-90deg,#2193b0, #6dd5ed);
+    padding-bottom: 10px;
+}
+
+.frontheadings h3{
+    font-size: 30px;
+    font-weight: lighter;
+    font-family:"Rubik",sans-serif;
+}
+
+/*Registration*/
+
+.regbox{
+    max-width: 500px;
+    width: 100%;
+    margin: 20px 0 0 20px;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+}
+
+.registration{
+    margin: 16px;
+    font-family: sans-serif;
+}
+
+.registration h2{
+    text-align: center;
+}
+
+input[type=text], input[type=password]{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px;
+    border: none;
+    border-radius: 3px;
+
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    background-color: #ddd;
+    outline: none;
+}
