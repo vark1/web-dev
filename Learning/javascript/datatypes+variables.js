@@ -21,5 +21,5 @@ console.log(num);
 console.log(typeof num)
 
 /*In console, whatever you write is executed as soon as you press enter ie line by line.
-This is known as REPL: Read Execute Print Loop
+This is known as REPL: Read Eval Print Loop
 This does not happen in vscode as it is script*/
