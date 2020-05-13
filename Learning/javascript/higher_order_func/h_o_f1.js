@@ -13,18 +13,3 @@ function greet (findName, fullName){
 }
 
 greet(getFirstName, "Varun Kumar")
-
-
-/*Replacing findName with getFirstName as both of them are the same. We were just using findName to use getFirstName as an object*/
-
-// function getFirstName (fullName){
-//     return fullName.split(" ")[0]
-// }
-
-// function greet (getFirstName, fullName){
-//     let firstName = getFirstName (fullName);
-//     console.log("Hey " + firstName)
-
-// }
-
-// greet(getFirstName, "Varun Kumar")
