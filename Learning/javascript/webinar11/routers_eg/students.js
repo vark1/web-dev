@@ -8,6 +8,14 @@ const route = require('express').Router()
 ]
 
 route.get('/', (req,res) => res.send(students))
+route.post('/',(req,res)=>{
+    students.push({
+        name: req.body.name,
+        colg: req.body.colg,
+        year: req.body.year
+    })
+    res.send(students)
+})
 route.get('/:id', (req,res) => res.send(students[req.params.id]))
 
 module.exports = route
