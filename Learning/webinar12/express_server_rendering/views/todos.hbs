@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/todos" method="POST"> <!--action means my form will submit to this url ie /todos and method is POST ie my data will go as a post request-->
+        <input name="newtodo">
+        <input type="submit">
+    </form>
+    <ul>
+        {{#each todos as |todo|}}
+     <!--whatever you write inside these handlebars will be repeated for each item avaible in an array called todos-->
+            <li>{{todo.task}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>
