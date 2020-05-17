@@ -1,0 +1,14 @@
+{
+  "name": "practice-daily_journal",
+  "version": "0.1.0",
+  "description": "Practice website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
