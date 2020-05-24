@@ -8,21 +8,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="shop.js"></script>
-    <script src="index.js"></script>
-    <title>Shop</title>
+    <script src="add_products.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    
+    <div class="p-4">
+        <h3 class="text-center">Add Products</h3>
         <div class="row">
             <div class="col"></div>
-            <h2 class="col">Shop</h2>
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="productManufacturer">Manufacturer</label>
+                        <input type="text" id="productManufacturer"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input type="number" id="productPrice"></input>
+                    </div>
+                </form>
+                <button id="btnProductAdd" class="btn btn-secondary">Add</button>
+
+            </div>
             <div class="col"></div>
         </div>
 
-        <div class="row" id="product-list">
-
-
-        </div>
     </div>
+
 </body>
 </html>
