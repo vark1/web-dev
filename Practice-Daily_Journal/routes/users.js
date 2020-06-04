@@ -15,8 +15,7 @@ route.get('/', (req,res)=>[
 
 route.post('/', (req,res)=>{
     user.create({   //create a user
-        name: req.body.name,
-        password: req.body.password
+        name: req.body.name
     }).then((user)=>{
         res.status(201).send(user)
     }).catch((err)=>{
