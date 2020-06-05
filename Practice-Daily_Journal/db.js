@@ -5,7 +5,9 @@ const db = new Sequelize ('journaldb','journalist','journalpass',{
     dialect:'mysql'
 })
 
-const User = db.define('users', {
+const User = db.define('users', { 
+    //when you first run this code, the table will be created and you cant change the code here then.
+    //for eg, if you want to add password, then you have to either create a new table or alter the table 
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,

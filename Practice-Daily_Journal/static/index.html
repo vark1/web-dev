@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="index.js"></script>
+    <script src="Get&AddUsers.js"></script>
+    <link href="./css/style.css" rel="stylesheet">
     <title>My Daily Journal</title>
 </head>
 <body>
     <div class="container">
-        <img src="Logo.png" id="logo">
+        <img src="./css/Logo.png" id="logo">
         <ul class="navbar">
             <li class="el"><a href="index.html">Home</a></li>
             <li class="el"><a href="mynotes.html">My Notes</a></li>
@@ -18,8 +21,17 @@
         <div class="textheading">
             <h1>MY DAILY JOURNAL</h1>
             <h2>Welcome to Daily Journal. Here you can record your ideas on-the-go.</h2>
-            <img src="multimedia-option.png" id="arrow">        
+            <img src="./css/multimedia-option.png" id="arrow">       
         </div>
+        <div>
+            <form>
+                <label for="user_input">Username</label>
+                <input type="text" id="user_input"><br>
+                <button id="add_user">Add user</button><br>
+                <button id="get_user">Show All users</button>
+            </form>
+        </div>
+        <div id="user_list"></div>
     </div>
 </body>
 </html>
