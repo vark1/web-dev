@@ -19,6 +19,9 @@ passport.deserializeUser(function (username, done){ //tells us how to recover th
     })
 })
 
+//The local authentication strategy authenticates users using a username and password. 
+//The strategy requires a verify callback, which accepts these credentials and calls done providing a user.
+
 passport.use(new LocalStrategy(function (username, password, done){
     Users.findOne({
         where: {
