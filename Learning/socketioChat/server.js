@@ -8,6 +8,12 @@ const io = socketio(server)            //calling socketio on server
 //when i call socketio lib with my http server, it enables certain functionality in my http server. One of them being serving the socketio js file
 //localhost:1635/socket.io/socket.io.js
 
+let users = {
+   'varun': 'pass1'
+}
+
+let socketMap = {}
+
 io.on('connection', (socket) => {
    console.log('connected with socket id = ', socket.id)
 
@@ -16,29 +22,30 @@ io.on('connection', (socket) => {
    //    //if we use socket.emit, only the person sends and receives it. use io.emit to send it to everyone
    //    //socket.broadcast.emit sends it to everyone EXCEPT the current user
    // })
-
-   let users = {
-      'varun': 'pass1'
+   function login(s,u){
+      s.join(u)
+      s.emit('logged_in')
+      socketMap[s.id] = u
+      console.log(socketMap)
    }
 
    socket.on('login',(data)=>{
       if(users[data.username]){
          if(users[data.username] == data.password){
-            socket.join(data.username)
-            socket.emit('logged_in')
+            login(socket, data.username)
          }else{
             socket.emit('login_failed')
          }
       }else{
          users[data.username] = data.password
-         socket.join(data.username)          //room
-         socket.emit('logged_in')
+         login(socket, data.username)
       }
       console.log(users)
 
    })
 
    socket.on('msg_send', (data)=>{
+      data.from = socketMap[socket.id]
       if(data.to){
          io.to(data.to).emit('msg_rcvd', data)
       }else{
