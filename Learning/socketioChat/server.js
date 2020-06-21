@@ -17,9 +17,25 @@ io.on('connection', (socket) => {
    //    //socket.broadcast.emit sends it to everyone EXCEPT the current user
    // })
 
+   let users = {
+      'varun': 'pass1'
+   }
+
    socket.on('login',(data)=>{
-      socket.join(data.username)          //room
-      socket.emit('logged_in', data)
+      if(users[data.username]){
+         if(users[data.username] == data.password){
+            socket.join(data.username)
+            socket.emit('logged_in')
+         }else{
+            socket.emit('login_failed')
+         }
+      }else{
+         users[data.username] = data.password
+         socket.join(data.username)          //room
+         socket.emit('logged_in')
+      }
+      console.log(users)
+
    })
 
    socket.on('msg_send', (data)=>{
