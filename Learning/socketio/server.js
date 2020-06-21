@@ -10,6 +10,14 @@ const io = socketio(server)            //calling socketio on server
 
 io.on('connection', (socket) => {
    console.log('connected with socket id = ', socket.id)
+
+   socket.on('boom',()=>{              //event from client to the server
+      console.log('boom recieved from: ', socket.id)
+   })
+
+   setInterval(()=>{
+      socket.emit('whizz')             //event from server to the client
+   },2000)
 })
 
 app.use('/',express.static(__dirname + '/public'))
