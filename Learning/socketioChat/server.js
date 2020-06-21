@@ -11,10 +11,23 @@ const io = socketio(server)            //calling socketio on server
 io.on('connection', (socket) => {
    console.log('connected with socket id = ', socket.id)
 
+   // socket.on('msg_send', (data)=>{
+   //    socket.broadcast.emit('msg_rcvd', data)        //dont confuse this with socket.emit
+   //    //if we use socket.emit, only the person sends and receives it. use io.emit to send it to everyone
+   //    //socket.broadcast.emit sends it to everyone EXCEPT the current user
+   // })
+
+   socket.on('login',(data)=>{
+      socket.join(data.username)          //room
+      socket.emit('logged_in', data)
+   })
+
    socket.on('msg_send', (data)=>{
-      socket.broadcast.emit('msg_rcvd', data)        //dont confuse this with socket.emit
-      //if we use socket.emit, only the person sends and receives it. use io.emit to send it to everyone
-      //socket.broadcast.emit sends it to everyone EXCEPT the current user
+      if(data.to){
+         io.to(data.to).emit('msg_rcvd', data)
+      }else{
+         socket.broadcast.emit('msg_rcvd', data)
+      }
    })
 })
 
