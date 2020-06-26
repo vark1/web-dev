@@ -24,6 +24,47 @@ var sqrt_n = function(){
 //allows to create objects without using the class
 
 //One way of creating javascript object (JSON) - Javascript Object Notation
+
+//Another way
+function Fruit(taste, color){
+   this.color = color;
+   this.taste = taste;
+}
+
+//new keyword
+let mango = new Fruit ("sweet", "yellow")
+let orange = new Fruit ("sour", "orange")
+
+//One way
+let apple = {
+   taste: "sweet",
+   color: "red"
+}
+
+//Creating using class keyword (ECMAScript 2015)
+
+//Class Declaration(Not hoisted- it does not work the way functions work)
+class FruitClass{
+   constructor(taste, color){
+      this.color = color;
+      this.taste = taste;
+   }
+}
+
+let kiwi = new FruitClass("sour", "green")
+
+//Class Expression (Not hoisted)
+let FruitExpression = class {
+   constructor(taste, color){
+      this.color = color;
+      this.taste = taste;
+   }
+}
+
+let kiwi2 = new FruitExpression("sour", "green")
+
+
+/*
 var bird = {
    x:100,
    y:10,
@@ -43,3 +84,4 @@ for(let i = 0; i < bird.eggs.length; i++){
 bird.eggs.forEach(function(val, idx){
    console.log(idx,val);
 })
+*/
