@@ -27,8 +27,8 @@ var sqrt_n = function(){
 
 //Another way
 function Fruit(taste, color){
-   this.color = color;
-   this.taste = taste;
+   this.color = color;  //when we use this here, it refers to the global object 
+   this.taste = taste; //but after using it (constructor function) in new, this refers to the function name as an object or instance of that function
 }
 
 //new keyword
