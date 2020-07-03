@@ -52,3 +52,34 @@ console.log(fun.__proto__ == Function.prototype)
 
 //prototypes are predefined keywords which are the models or blueprints from which we create things
 //__proto__ is a hidden pointer that points to module from which it was created
+
+
+console.log(str.charAt(4))
+console.log(typeof str.charAt)
+let str2 = "gfhfdfds"
+console.log(str.charAt == str2.charAt) //true
+
+str.charAt = function () {return 'X'} //does not make a difference
+
+//You can change how default classes in js behave by going into their prototype and the changing the definition of the function
+//1. find where the function exists, for eg.
+//At str.charAt, we get the function. we go deeper, str.__proto__.charAt, we get the function. we go deeper, str.__proto__.__proto__.charAt, we get undefined. Which means the function is in str.__proto__
+//2. This means str.__proto__ == String.prototype //true
+//3. Hence the function exists in String.prototype.charAt
+//4. Now if we do, String.prototype.charAt = function () { return 'X' }
+//This will change how charAt works
+//5. str.charAt(2), str2.charAt(3) anything will return X
+
+String.prototype.charAt = function () { return 'X'}
+//we can also use __proto__ but it is hidden and not all browsers will allow you to access __proto__
+console.log(str.charAt(1))
+
+//String.prototype contains all default string functions
+//like charAt, indexOf, substring, slice etc
+
+Array.prototype.joinOriginal = Array.prototype.join   //creating a new function in prototype 'joinOriginal' and putting 'join' init
+
+Array.prototype.join = function () {                  //changing 'join' function in the prototype
+   console.log('join called on ', this)               //now it will also print where join is called
+   return this.joinOriginal(...arguments)             //...arguments is how you put in arguments
+}
