@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="jquery-3.5.1.js"></script>
+   <script src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   
+   <div id="one" class="item">Something</div>
+   <div class="item">Something</div>
+   <div id="three">Something</div>
+   <div class="item">Something</div>
+   <div>Something</div>
+   <div class="item">Something</div>
+   <!--$('one') == document.getElementById('one') comes out to be false-->
+   <!--$('one')[0] == document.getElementById('one') comes out to be true-->
+   <!-- This is because when we select something with jQuery, we dont get the actual object, we get wrapped with a jQuery prototype. -->
+   <!-- You dont get access to the HTML element directly, you get an access to an array which contains the HTML element -->
+   
+   
+   <!-- let o = $('#one') -->
+   <!-- o.text() //returns text inside, ie Something -->
+   <!-- o.text('Hello world') //will change the text to Hello world -->
+   <!-- o.html("Hello <b>world</b>") //will change the html -->
+   <!-- o.html() //will return the html file ie "Hello <b>world</b>" -->
+   <!-- o.attr('height', 2000) //will add the height html attribute with value 2000 ie div now becomes <div id="one" class="item" height="2000">Something</div>-->
+   
+   <!-- ---------------------------------------------------------- -->
+
+   <input id="item">
+   <button id="prepend">PREPEND</button>
+   <button id="append">APPEND</button>
+   <ul id="list"></ul>
+
+   <!-- ---------------------------------------------------------- -->
+
+   <button id="fetch">FETCH</button>
+   <ul id="people">
+
+   </ul>
+
+</body>
+</html>
