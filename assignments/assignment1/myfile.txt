@@ -1,0 +1,6 @@
+cat
+dog
+cat
+rat
+monkey
+dog

@@ -1,0 +1,4 @@
+dog: 2 
+ cat: 2 
+rat: 1 
+monkey: 1 
