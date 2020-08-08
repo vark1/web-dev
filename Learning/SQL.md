@@ -62,3 +62,43 @@ CREATE TABLE STUDENT(
 INSERT INTO student
 VALUES (1, 'Varun', 'Kendriya Vidyalaya', 90)
 ```
+
+## _To fetch data_
+
+```sql
+SELECT /*keywords: ALL(default), DISTINCT*/column_name_1, column_name_2,... /* use * for all*/
+FROM table_name
+WHERE condition(eg: school="VMC", eg: school<>"VMC" /*<> is not-equals-to operator*/, eg: NOT school = "VMC");
+```
+
+Keywords:
+
+> BETWEEN: a range
+
+> IN/NOT IN: to check if a values is this or that
+
+> LIKE/NOT LIKE: matching a particular pattern
+>
+> - %(percentage): Multiple characters. <br>
+>   eg: SELECT \* FROM student WHERE school LIKE %cod% ;<br> _This means iske left and right me kuch bhi aaskta h bas beech me cod aana chahiye. This will take 'decode' as well as 'coding blocks'_
+
+> - \_(underscore): character by character.<br>
+>   eg: SELECT \* FROM student WHERE name LIKE 'C \_ \_ \_'; <br> _This means there can only be 4 characters after C. They might be anything but only 4. This will take 'code' but wont take 'coding'_
+
+> - \ (backslash): to ignore the next character. <br>
+>   eg: SELECT name, Marks FROM students WHERE name '% \_h';
+>   <br> _This selects name and marks of the students who have \_h at the end of their names._
+
+> NULL/NOT NULL: when comparing with NULL/NOT NULL, we dont use equals-to sign. <br>
+> eg: SELECT \* FROM students WHERE Marks is NULL
+
+e.g:
+
+```sql
+SELECT *
+FROM student
+/*WHERE Marks BETWEEN 81 and 90*/
+/*WHERE School IN("BBT" OR "VMC")*/
+WHERE School NOT IN("BBT" OR "VMC");
+;
+```
