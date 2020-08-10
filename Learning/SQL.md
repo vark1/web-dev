@@ -39,9 +39,9 @@ Constraints are the conditions which are applied on an attribute or set of attri
 
 ```sql
 CREATE TABLE table_name(
-   column_name datatype[size],
-   column_name datatype[size],
-   column_name datatype[size],
+   column_name datatype(size),
+   column_name datatype(size),
+   column_name datatype(size),
 )
 ```
 
@@ -50,8 +50,8 @@ example with constraints:
 ```sql
 CREATE TABLE STUDENT(
    RollNo int PRIMARY KEY NOT NULL,
-   Name char[30] NULL,
-   School char[50] DEFAULT 'Kendriya Vidyalaya',
+   Name char(30) NULL,
+   School char(50) DEFAULT 'Kendriya Vidyalaya',
    Marks int CHECK(Marks>0)
 )
 ```
