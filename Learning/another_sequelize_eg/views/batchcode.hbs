@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Batch Code</title>
+</head>
+
+<body>
+   <h1>Generate Batch Code</h1>
+   <form action="/batchcode" method="POST">
+      <b>Center</b>
+      <select name="center">
+         {{#each centers as |co|}}
+         <option value="{{co.id}}">{{co.name}}</option>
+         {{/each}}
+      </select>
+      <br>
+      <b>Years</b>
+      <select name="year">
+         {{#each years as |y|}}
+         <option value="{{y}}">{{y}}</option>
+         {{/each}}
+      </select>
+      <br>
+      <b>Batch no</b>
+      <input type="number" min="1" max="5">
+   </form>
+</body>
+
+</html>

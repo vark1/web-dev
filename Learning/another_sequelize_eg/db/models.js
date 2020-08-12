@@ -33,7 +33,7 @@ const Center = db.define("center", {
 
 const Season = db.define("season", {
   id: {
-    type: DataTypes.STRING(2),
+    type: DataTypes.STRING(1),
     primaryKey: true,
   },
   name: {
@@ -62,3 +62,5 @@ Center.hasMany(Batch);
 Season.hasMany(Batch);
 
 db.sync();
+
+module.exports = { db, Center, Season, Batch, Course, Teacher };
