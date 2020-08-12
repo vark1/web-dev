@@ -1,61 +1,63 @@
 /*Navbar based off a tutorial*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #24252a;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
 }
 
-.logo{
-    height: 50px;
-    cursor: pointer;
-    margin-right: auto;
+.logo {
+  height: 50px;
+  cursor: pointer;
+  margin-right: auto;
 }
 
-li, a, button{
-    font-family: "montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
+li,
+a,
+button {
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
 }
 
-header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
 }
 
-.navbar{
-    list-style: none;
+.navbar {
+  list-style: none;
 }
 
-.navbar li{
-    display: inline-block;
-    padding: 0px 20px;
+.navbar li {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
-.navbar li a{
-    transition: all 0.8s ease 0s;
+.navbar li a {
+  transition: all 0.8s ease 0s;
 }
 
-.navbar li a:hover{
-    color: #0088a9;
+.navbar li a:hover {
+  color: #0088a9;
 }
 
-button{
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.8s ease 0s;
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.8s ease 0s;
 }
 
-button:hover{
-    background-color: rgba(0,136,169,0.8);
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
 }
