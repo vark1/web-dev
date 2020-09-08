@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-   <script src="/socket.io/socket.io.js"></script>
-   <script defer src="script.js"></script> <!--defer specifies script is executed only after the page has finished parsing-->
-</head>
-<body>
-   <h1>socket io Example</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <!--defer specifies script is executed only after the page has finished parsing-->
+  </head>
+  <body>
+    <h1>socket io Example</h1>
 
-   <div id="loginBox">
-      <input id="inpUsername" placeholder="username">
-      <input id="inpPassword" placeholder="password" type="password">
+    <div id="loginBox">
+      <input id="inpUsername" placeholder="username" />
+      <input id="inpPassword" placeholder="password" type="password" />
       <button id="btnStart">START</button>
-   </div>
+    </div>
 
-   <div id="chatBox">
-      <input id="inpToUser" placeholder="Send to (default everyone)">
-      <input id="inpNewMsg" placeholder="new message">
+    <div id="chatBox">
+      <input id="inpToUser" placeholder="Send to (default everyone)" />
+      <input id="inpNewMsg" placeholder="new message" />
       <button id="btnSendMsg">SEND</button>
       <ul id="ulMsgs"></ul>
-   </div>
-</body>
+    </div>
+  </body>
 </html>
