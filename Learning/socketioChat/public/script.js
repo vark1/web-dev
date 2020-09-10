@@ -1,34 +1,31 @@
-let socket = io()
+let socket = io();
 
+$("#loginBox").show();
+$("#chatBox").hide();
 
-$('#loginBox').show()
-$('#chatBox').hide()
+$("#btnStart").click(() => {
+  socket.emit("login", {
+    username: $("#inpUsername").val(),
+    password: $("#inpPassword").val(),
+  });
+});
 
-$('#btnStart').click(()=>{
-   socket.emit('login',{
-      username: $('#inpUsername').val(),
-      password: $('#inpPassword').val()
-   })
-})
+socket.on("logged_in", () => {
+  $("#loginBox").hide();
+  $("#chatBox").show();
+});
 
-socket.on('logged_in',() => {
-   $('#loginBox').hide()
-   $('#chatBox').show()
-})
+socket.on("login_failed", () => {
+  window.alert("Username or Password Wrong");
+});
 
-socket.on('login_failed', ()=>{
-   window.alert('Username or Password Wrong')
-})
+$("#btnSendMsg").click(() => {
+  socket.emit("msg_send", {
+    to: $("#inpToUser").val(),
+    msg: $("#inpNewMsg").val(),
+  });
+});
 
-$('#btnSendMsg').click(()=>{
-   socket.emit('msg_send',{
-      to: $('#inpToUser').val(),
-      msg: $('#inpNewMsg').val()
-   })
-})
-
-socket.on('msg_rcvd', (data)=>{
-   $('#ulMsgs').append($('<li>').text(
-      `[${data.from}: ${data.msg}]`
-   ))
-})
+socket.on("msg_rcvd", (data) => {
+  $("#ulMsgs").append($("<li>").text(`[${data.from}: ${data.msg}]`));
+});
